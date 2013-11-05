@@ -1,4 +1,4 @@
 clock
 =====
 
-This is an experiment.
+This is an experiment in JavaScript.
