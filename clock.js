@@ -21,5 +21,5 @@ function setTime() {
 }
 
 $(function() {
-    setTime();
+    window.setInterval(setTime, 1000);
 });
