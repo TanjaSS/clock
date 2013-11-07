@@ -1,9 +1,25 @@
-$(function() {
-    var time = new Date();
+function setHours(time) {
     var hours = time.getHours();
-    var minutes = time.getMinutes();
-    var seconds = time.getSeconds();
     $("#hours").html(hours);
+}
+
+function setMinutes(time) {
+    var minutes = time.getMinutes();
     $("#minutes").html(minutes);
-    $("#seconds").html(seconds);
+}
+
+function setSeconds(time) {
+    var seconds = time.getSeconds();
+    $("#seconds").html(seconds);    
+}
+
+function setTime() {
+    var time = new Date();
+    setHours(time);
+    setMinutes(time);
+    setSeconds(time);
+}
+
+$(function() {
+    setTime();
 });
