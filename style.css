@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+}
+
+#hours, #minutes, #seconds {
+    display: inline-block;
+    padding: 30px;
+    font-size: 3.9em;
+}
