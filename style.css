@@ -2,54 +2,67 @@ body {
     text-align: center;
 }
 
-.around1, .around2, .around3 {
-    display: inline-block;
-    margin: 20px;
-    width: 200px;
-    height: 200px;
-    line-height: 200px;
-    -moz-border-radius: 103px; 
-    -webkit-border-radius: 103px; 
-    border-radius: 103px;
-}
-
-.around1 {
-    border: 3px solid red;
-}
-
-.around2 {
-    border: 3px solid blue;
-}
-
-.around3 {
-    border: 3px solid green;
-}
-
 #hours, #minutes, #seconds {
-    vertical-align: middle;
-    display:  inline-block;
-    margin: 0;
-    padding: 0;
-    width: 140px;
-    height: 140px;
-    line-height: 140px;
+    z-index: 500;
+    height: 30%;
+    width: 30%;
+    position: absolute;
+    line-height: 75px;
+    top: 35%;
+    right: 35%;
+    bottom: 35%;
+    left: 35%;
     -moz-border-radius: 5px; 
     -webkit-border-radius: 5px; 
     border-radius: 95px;
-    font-size: 3.5em;
+    background-color: white;
 }
 
-#hours {
-    border: 25px solid red;
-    color: red;
+.wrapper {
+    display: inline-table;
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    -moz-border-radius: 125px; 
+    -webkit-border-radius: 125px; 
+    border-radius: 125px;
+    margin: auto;
 }
 
-#minutes {
-    border: 25px solid blue;
-    color: blue;
+.pie {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background: #08C;
+    -moz-transform-origin: 100% 50%;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+}   
+
+.spinner {
+    border-radius: 125px 0 0 125px;
+    z-index: 200;
+    border-right: none;
+    -moz-transform: rotate(6deg);
+    -webkit-transform: rotate(6deg);
+    transform: rotate(6deg);
 }
 
-#seconds {
-    border: 25px solid green;
-    color: green;
+.filler {
+    border-radius: 0 125px 125px 0;
+    z-index: 100;
+    border-left: none;
+    fill: 1;
+    left: 50%;
+    opacity: 0;
+}
+
+.mask {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: 300;
+    opacity: 1;
+    background: white;
 }
