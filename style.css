@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    margin-top: 50px;
 }
 
 #hours, #minutes, #seconds {
@@ -44,9 +45,6 @@ body {
     border-radius: 125px 0 0 125px;
     z-index: 200;
     border-right: none;
-    -moz-transform: rotate(6deg);
-    -webkit-transform: rotate(6deg);
-    transform: rotate(6deg);
 }
 
 .filler {
@@ -55,7 +53,6 @@ body {
     border-left: none;
     fill: 1;
     left: 50%;
-    opacity: 0;
 }
 
 .mask {
@@ -63,6 +60,5 @@ body {
     height: 100%;
     position: absolute;
     z-index: 300;
-    opacity: 1;
     background: white;
 }
