@@ -2,8 +2,54 @@ body {
     text-align: center;
 }
 
-#hours, #minutes, #seconds {
+.around1, .around2, .around3 {
     display: inline-block;
-    padding: 30px;
-    font-size: 3.9em;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    -moz-border-radius: 103px; 
+    -webkit-border-radius: 103px; 
+    border-radius: 103px;
+}
+
+.around1 {
+    border: 3px solid red;
+}
+
+.around2 {
+    border: 3px solid blue;
+}
+
+.around3 {
+    border: 3px solid green;
+}
+
+#hours, #minutes, #seconds {
+    vertical-align: middle;
+    display:  inline-block;
+    margin: 0;
+    padding: 0;
+    width: 140px;
+    height: 140px;
+    line-height: 140px;
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    border-radius: 95px;
+    font-size: 3.5em;
+}
+
+#hours {
+    border: 25px solid red;
+    color: red;
+}
+
+#minutes {
+    border: 25px solid blue;
+    color: blue;
+}
+
+#seconds {
+    border: 25px solid green;
+    color: green;
 }
