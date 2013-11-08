@@ -11,8 +11,13 @@ function setMinutes(time) {
 function setSeconds(time) {
     var seconds = time.getSeconds();
     var angle = 360 / 60 * seconds;
-    var rotate = "rotate(" + angle + "deg)";
     $("#seconds").html(seconds);
+    setClockAngle(angle);
+}
+
+function setClockAngle(angle) {
+    var rotate = "rotate(" + angle + "deg)";
+    
     $(".spinner").css({
         "-moz-transform": rotate,
         "-webkit-transform": rotate,
