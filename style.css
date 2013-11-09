@@ -3,7 +3,7 @@ body {
     margin-top: 50px;
 }
 
-#hours, #minutes, #seconds {
+.time {
     z-index: 500;
     height: 30%;
     width: 30%;

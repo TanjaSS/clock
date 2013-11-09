@@ -1,35 +1,40 @@
 function setHours(time) {
     var hours = time.getHours();
-    $("#hours").html(hours);
+    var angle = 360 / 24 * hours;
+    $("#hours .time").html(hours);
+    setClockAngle("#hours", angle);
 }
 
 function setMinutes(time) {
     var minutes = time.getMinutes();
-    $("#minutes").html(minutes);
+    var angle = 360 / 60 * minutes;
+    $("#minutes .time").html(minutes);
+    setClockAngle("#minutes", angle);
 }
 
 function setSeconds(time) {
     var seconds = time.getSeconds();
     var angle = 360 / 60 * seconds;
-    $("#seconds").html(seconds);
-    setClockAngle(angle);
+    $("#seconds .time").html(seconds);
+    setClockAngle("#seconds", angle);
 }
 
-function setClockAngle(angle) {
+function setClockAngle(selector, angle) {
     var rotate = "rotate(" + angle + "deg)";
+    var circle = $(selector);
     
-    $(".spinner").css({
+    circle.find(".spinner").css({
         "-moz-transform": rotate,
         "-webkit-transform": rotate,
         "transform": rotate
     });
     
     if(angle < 180) {
-        $(".filler").css("opacity", "0");
-        $(".mask").css("opacity", "1");
+        circle.find(".filler").css("opacity", "0");
+        circle.find(".mask").css("opacity", "1");
     } else {
-        $(".filler").css("opacity", "1");
-        $(".mask").css("opacity", "0");
+        circle.find(".filler").css("opacity", "1");
+        circle.find(".mask").css("opacity", "0");
     }    
 }
 
