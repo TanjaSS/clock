@@ -28,18 +28,43 @@ body {
     -moz-border-radius: 125px; 
     -webkit-border-radius: 125px; 
     border-radius: 125px;
-    margin: auto;
+    margin: 10px;
+    font-size: 3em;
+    text-shadow: 1px -1px #000;
 }
 
 .pie {
     width: 50%;
     height: 100%;
     position: absolute;
-    background: #08C;
     -moz-transform-origin: 100% 50%;
     -webkit-transform-origin: 100% 50%;
     transform-origin: 100% 50%;
 }   
+
+#hours .time {
+    color: #ff720a;
+}
+
+#minutes .time {
+    color: #156f1f;
+}
+
+#seconds .time {
+    color: #262121;
+}
+
+#hours .pie {
+    background: #f4aa74;
+}
+
+#minutes .pie {
+    background: #56c362;
+}
+
+#seconds .pie {
+    background: #8e7a7c;
+}
 
 .spinner {
     border-radius: 125px 0 0 125px;

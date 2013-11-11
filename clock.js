@@ -1,6 +1,6 @@
 function setHours(time) {
     var hours = time.getHours();
-    var angle = 360 / 24 * hours;
+    var angle = 360 / 12 * hours;
     $("#hours .time").html(hours);
     setClockAngle("#hours", angle);
 }
